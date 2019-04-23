@@ -8,13 +8,13 @@ it('renders without crashing', () => {
   shallow(<App />);
 });
 
-it('form displays default message "This form is invalid!"', () => {
+it('form displays default message', () => {
   const app = mount(<App />);
   const message = app.find('.form-message');
   expect(message.text()).toEqual('This form is invalid!');
 });
 
-it('valid form shows correct message"', () => {
+it('valid form shows correct message', () => {
   const app = mount(<App />);
   const message = app.find('.form-message');
   app.find('.name').simulate('change', { target: { value: 'Gus' } });
@@ -25,7 +25,7 @@ it('valid form shows correct message"', () => {
   expect(message.text()).toEqual('This form is valid!');
 });
 
-it('invalid form shows correct message"', () => {
+it('invalid form shows correct message', () => {
   const app = mount(<App />);
   const message = app.find('.form-message');
   app.find('.name').simulate('change', { target: { value: 'Gus Higuera' } });
@@ -36,7 +36,7 @@ it('invalid form shows correct message"', () => {
   expect(message.text()).toEqual('This form is invalid!');
 });
 
-it('isValid flag "true" on valid form"', () => { 
+it('isValid flag "true" on valid form', () => { 
   const formSpy = sinon.spy();
   const form = shallow(<Form isFormValid={formSpy} />); 
   form.find('.name').simulate('change', { target: { value: 'Gus' } });
@@ -47,7 +47,7 @@ it('isValid flag "true" on valid form"', () => {
   expect(formSpy.calledOnceWith(true)).toBe(true);
 });
 
-it('isValid flag "false" with invalid name"', () => { 
+it('isValid flag "false" with invalid name', () => { 
   const formSpy = sinon.spy();
   const form = shallow(<Form isFormValid={formSpy} />); 
   form.find('.name').simulate('change', { target: { value: 'Gus Higuera' } });
@@ -58,7 +58,7 @@ it('isValid flag "false" with invalid name"', () => {
   expect(formSpy.calledOnceWith(false)).toBe(true);
 });
 
-it('isValid flag "false" with invalid email"', () => { 
+it('isValid flag "false" with invalid email', () => { 
   const formSpy = sinon.spy();
   const form = shallow(<Form isFormValid={formSpy} />); 
   form.find('.name').simulate('change', { target: { value: 'Gus' } });
@@ -69,7 +69,7 @@ it('isValid flag "false" with invalid email"', () => {
   expect(formSpy.calledOnceWith(false)).toBe(true);
 });
 
-it('isValid flag "false" with invalid phone starting with 1"', () => { 
+it('isValid flag "false" with invalid phone starting with 1', () => { 
   const formSpy = sinon.spy();
   const form = shallow(<Form isFormValid={formSpy} />); 
   form.find('.name').simulate('change', { target: { value: 'Gus' } });
@@ -80,7 +80,7 @@ it('isValid flag "false" with invalid phone starting with 1"', () => {
   expect(formSpy.calledOnceWith(false)).toBe(true);
 });
 
-it('isValid flag "false" with invalid phone starting with 0"', () => { 
+it('isValid flag "false" with invalid phone starting with 0', () => { 
   const formSpy = sinon.spy();
   const form = shallow(<Form isFormValid={formSpy} />); 
   form.find('.name').simulate('change', { target: { value: 'Gus' } });
@@ -91,7 +91,7 @@ it('isValid flag "false" with invalid phone starting with 0"', () => {
   expect(formSpy.calledOnceWith(false)).toBe(true);
 });
 
-it('isValid flag "false" with invalid phone < than 10 chars"', () => { 
+it('isValid flag "false" with invalid phone < than 10 chars', () => { 
   const formSpy = sinon.spy();
   const form = shallow(<Form isFormValid={formSpy} />); 
   form.find('.name').simulate('change', { target: { value: 'Gus' } });
@@ -102,7 +102,7 @@ it('isValid flag "false" with invalid phone < than 10 chars"', () => {
   expect(formSpy.calledOnceWith(false)).toBe(true);
 });
 
-it('isValid flag "false" with invalid phone > than 10 chars"', () => { 
+it('isValid flag "false" with invalid phone > than 10 chars', () => { 
   const formSpy = sinon.spy();
   const form = shallow(<Form isFormValid={formSpy} />); 
   form.find('.name').simulate('change', { target: { value: 'Gus' } });
@@ -114,7 +114,7 @@ it('isValid flag "false" with invalid phone > than 10 chars"', () => {
 });
 
 
-it('isValid flag "false" with invalid url"', () => { 
+it('isValid flag "false" with invalid url', () => { 
   const formSpy = sinon.spy();
   const form = shallow(<Form isFormValid={formSpy} />); 
   form.find('.name').simulate('change', { target: { value: 'Gus' } });
