@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+A simple sample app with some sample form validations and tests.
+
 ## Available Scripts
 
 In the project directory, you can run:
