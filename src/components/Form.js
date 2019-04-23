@@ -12,7 +12,7 @@ class Form extends Component {
     }
     
     validateName = (name) => {
-        const lengthValid = name.length >=3 && name.length < 30;
+        const lengthValid = name.length >=3 && name.length <= 30;
         const re = /^[A-Z]+$/i
         return lengthValid && re.test(name);
     }
