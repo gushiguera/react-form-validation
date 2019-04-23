@@ -23,7 +23,7 @@ class Form extends Component {
     }
     
     validatePhone = (phone) => {
-        const firstDigitValid = phone.charAt(0) != "0" && phone.charAt(0) != "1"
+        const firstDigitValid = phone.charAt(0) !== "0" && phone.charAt(0) !== "1"
         const re = /^\d{10}$/
         return firstDigitValid && re.test(phone);
     }
@@ -67,15 +67,9 @@ class Form extends Component {
     
     verifyForm = () => {
         if (this.state.isNameValid && this.state.isEmailValid && this.state.isPhoneValid && this.state.isUrlValid) {
-            this.setState({
-                isFormValid: true,
-                formMessage: "Form is Complete!"
-            },  this.props.isFormValid(true))
+            this.props.isFormValid(true);
         } else {
-              this.setState({
-                isFormValid: true,
-                formMessage: "Form is Incomplete!"
-            },  this.props.isFormValid(false))
+            this.props.isFormValid(false);
         }
     }
     
