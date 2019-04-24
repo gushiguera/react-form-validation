@@ -1,4 +1,4 @@
-A simple sample app with some sample form validations and how to write tests.
+A simple React sample app with some sample basic form validations and tests written with Jest.
 
 
 ![Screenshot](https://user-images.githubusercontent.com/662995/56629338-aaa69880-6612-11e9-8e96-e51f2537a7b3.png)
