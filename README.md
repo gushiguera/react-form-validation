@@ -1,6 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 A simple sample app with some sample form validations and tests.
+
+![Screenshot](https://user-images.githubusercontent.com/662995/56629338-aaa69880-6612-11e9-8e96-e51f2537a7b3.png)
 
 ## Available Scripts
 
