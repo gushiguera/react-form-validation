@@ -1,4 +1,5 @@
-A simple sample app with some sample form validations and tests.
+A simple sample app with some sample form validations and how to write tests.
+
 
 ![Screenshot](https://user-images.githubusercontent.com/662995/56629338-aaa69880-6612-11e9-8e96-e51f2537a7b3.png)
 
